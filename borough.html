@@ -736,5 +736,21 @@ document.querySelectorAll(".borough").forEach((borough) => {
       box.querySelector("path").setAttribute("fill-opacity", "0.8");
     }
   });
+
+  borough.addEventListener("focus", () => {
+    const box = document.getElementById(`${borough.id}-box`);
+    if (box) {
+      box.querySelector("path").setAttribute("fill", "#90FBC9");
+      box.querySelector("path").setAttribute("fill-opacity", "1");
+    }
+  });
+
+  borough.addEventListener("blur", () => {
+    const box = document.getElementById(`${borough.id}-box`);
+    if (box) {
+      box.querySelector("path").setAttribute("fill", "white");
+      box.querySelector("path").setAttribute("fill-opacity", "0.8");
+    }
+  });
 });
 </script>
