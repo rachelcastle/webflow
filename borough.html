@@ -715,15 +715,15 @@
         }
       });
 
-  document.querySelectorAll(".borough").forEach((borough) => {
+document.querySelectorAll(".borough").forEach((borough) => {
   borough.addEventListener("mouseenter", () => {
     const box = document.getElementById(`${borough.id}-box`);
-    if (box) box.style.fill = "#90FBC9";
+    if (box) box.querySelector("path").setAttribute("fill", "#90FBC9");
   });
   
   borough.addEventListener("mouseleave", () => {
     const box = document.getElementById(`${borough.id}-box`);
-    if (box) box.style.fill = "white";
+    if (box) box.querySelector("path").setAttribute("fill", "white");
   });
 });
 </script>
